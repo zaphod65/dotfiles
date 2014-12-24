@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# Writes the title and artist of the song currently being played by MOC to STDOUT, formatted for xmobar
+# If MOC is neither playing a song or are paused, nothing will be written.
+
+GCOL="cyan"    # The colour to be used to draw the song artist when playing
+PCOL="darkred"      # The colour to be used to draw both the song title and artist when paused
+
+MOCSTATE=$(mocp --info | head -n 1 | tail -c +8)
+# These variables were added by myself to clean up the script.
+artist=$(mocp --info | tail -n +4 | head -n 1 | tail -c +9)
+title=$(mocp --info | tail -n +5 | head -n 1 | tail -c +12)
+# Specific to the 1440x900 res of my TV
+artist=${artist:0:25}
+title=${title:0:39}
+
+if [ $MOCSTATE == "PLAY" ]; then
+  # MOC is playing
+  COLOR=$GCOL
+elif [ $MOCSTATE == "PAUSE" ]; then
+  # MOC is paused
+  COLOR=$PCOL
+fi
+
+# This is needed or else tags are output with no information; xmobar can't parse these at all.
+if [ $MOCSTATE != "STOP" ]; then
+  echo "<fc=$COLOR>$artist - $title</fc> |"
+fi
