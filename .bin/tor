@@ -1,0 +1,1 @@
+transmission-cli $1 -w /store/temp -d $2 -u 10
