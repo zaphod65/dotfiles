@@ -1,0 +1,1 @@
+su - guest -c 'startx :2'
