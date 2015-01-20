@@ -5,6 +5,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.Grid
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.IM
+import XMonad.Layout.Spacing
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import qualified XMonad.StackSet as SS
@@ -22,7 +23,7 @@ myTiled = Tall nmaster delta ratio
 	delta = 3/100
 mylayouts = avoidStruts ( onWorkspace "video" Full $ onWorkspace "chat" chatLayout $ mkToggle ( single FULL ) ( myTiled ||| horizon ||| Grid ) )
   where
-	chatLayout = withIM (18/100) (Role "buddy_list") Grid
+	chatLayout = withIM (18/100) (Role "buddy_list") (spacing 8 Grid)
 	horizon = Mirror myTiled
 
 myNormalBorderColor = "#000000"
