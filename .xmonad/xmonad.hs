@@ -69,6 +69,8 @@ main = do
 	  logHook = myLogHook xmproc,
 	  -- Window border colours; only for unfocused so I can override it to black
 	  normalBorderColor = myNormalBorderColor,
+	  -- Terminal?
+	  XMonad.terminal = "xterm -class XTerm-color",
 	  -- Change 'mod' key to super/windows/meta
 	  modMask = mod4Mask
   	  } `additionalKeys`
@@ -78,7 +80,7 @@ main = do
 	  -- Application shortcuts
 	    ((mod4Mask, xK_o), spawn "libreoffice"),
 	    ((mod4Mask, xK_c), spawn "google-chrome"),
-		((mod4Mask .|. shiftMask , xK_m), spawn "xterm -title MOC -name MOC -e mocp"),
+		((mod4Mask .|. shiftMask , xK_m), spawn "xterm -class XTerm-color -title MOC -name MOC -e mocp"),
 		((mod4Mask .|. shiftMask , xK_s), spawn "steam"),
 		((mod4Mask, xK_s), spawn "skype"),
 	  --((mod4Mask , xK_e), spawn "krusader"),
@@ -89,8 +91,9 @@ main = do
 		((mod4Mask .|. shiftMask , xK_f), sendMessage $ Toggle FULL),
 	  -- Keys to control volume
 	    ((noModMask, xF86XK_AudioMute), spawn "/home/zaphod/.xmobin/doMute" ),
-	    ((noModMask, xF86XK_AudioLowerVolume), spawn "/home/zaphod/.xmobin/volDown"),
-		((noModMask, xF86XK_AudioRaiseVolume), spawn "/home/zaphod/.xmobin/volUp"),
+		-- Taking these out for now because of issues with program volume affecting master volume
+	    --((noModMask, xF86XK_AudioLowerVolume), spawn "/home/zaphod/.xmobin/volDown"),
+		--((noModMask, xF86XK_AudioRaiseVolume), spawn "/home/zaphod/.xmobin/volUp"),
 	  -- Media keys
 	    ((noModMask, xF86XK_AudioPlay), spawn "/home/zaphod/.xmobin/pause"),
 		((noModMask, xF86XK_AudioStop), spawn "/home/zaphod/.xmobin/stop"),

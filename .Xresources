@@ -1,6 +1,6 @@
-!XTerm.termName:   xterm-256color
-!XTerm.foreground: #FFFFFF
-!XTerm.background: #000000
+XTerm.termName:   uxterm
+XTerm.foreground: white
+XTerm.background: black
 !XTerm.faceName:   ProggyTiny:style=regular:size=10
-!XTerm.boldMode:   false
-!XTerm.allowBoldFonts: false
+XTerm.boldMode:   false
+XTerm.allowBoldFonts: false
