@@ -14,6 +14,7 @@ import XMonad.Util.EZConfig(additionalKeys)
 import Graphics.X11.ExtraTypes.XF86
 import System.IO
 import Data.Ratio ((%))
+import XMonad.Hooks.SetWMName
 
 -- Three layouts used: tall, mirror tall and grid.  Plus sets up toggle for fullscreen of active window
 myTiled = Tall nmaster delta ratio 
@@ -56,6 +57,7 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 main = do
   xmproc <- spawnPipe "xmobar"
   xmonad $ defaultConfig {
+	  startupHook = setWMName "LG3D",
 	  -- handles full screen things being properly full screen
 	  manageHook = manageDocks <+> composeOne [ className =? "Pidgin" -?> doShift "chat", 
 												title =? "MOC" -?> doShift "music",
