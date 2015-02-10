@@ -57,6 +57,8 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 main = do
   xmproc <- spawnPipe "xmobar"
   xmonad $ defaultConfig {
+	  -- This is a weirdly hacky workaround for Java GUI applications; JRE doesn't recognise XMonad properly
+	  -- so it needs to be "renamed" so JRE code works properly.
 	  startupHook = setWMName "LG3D",
 	  -- handles full screen things being properly full screen
 	  manageHook = manageDocks <+> composeOne [ className =? "Pidgin" -?> doShift "chat", 
