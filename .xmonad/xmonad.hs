@@ -42,7 +42,7 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 										"Tall" -> " | "
 										"Mirror Tall" -> " - "
 										"Grid" -> " + "
-										"IM Grid" -> " * "
+										"IM Spacing 8 Grid" -> " * "
 										-- ASCII box character, in case this ever breaks
 										"Full" -> " ■ "
 										_ -> x
