@@ -264,7 +264,7 @@ XTermTheme = dante
 #             Fastdir3 = /mp3/rap
 #             Fastdir4 = /mp3/etc
 #
-#Fastdir1 =
+Fastdir1 = /home/zaphod
 #Fastdir2 =
 #Fastdir3 =
 #Fastdir4 =
