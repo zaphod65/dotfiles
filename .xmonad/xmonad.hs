@@ -22,7 +22,8 @@ myTiled = Tall nmaster delta ratio
   	nmaster = 1
 	ratio = 1/2
 	delta = 3/100
-mylayouts = avoidStruts ( onWorkspace "video" Full $ onWorkspace "chat" chatLayout $ mkToggle ( single FULL ) ( myTiled ||| horizon ||| Grid ) )
+-- mylayouts = avoidStruts ( onWorkspace "video" Full $ onWorkspace "chat" chatLayout $ mkToggle ( single FULL ) ( myTiled ||| horizon ||| Grid ) )
+mylayouts = avoidStruts ( onWorkspace "video" Full $ mkToggle ( single FULL ) ( myTiled ||| horizon ||| Grid ) )
   where
 	chatLayout = withIM (18/100) (Role "buddy_list") (spacing 8 Grid)
 	horizon = Mirror myTiled
@@ -30,7 +31,7 @@ mylayouts = avoidStruts ( onWorkspace "video" Full $ onWorkspace "chat" chatLayo
 myNormalBorderColor = "#000000"
 
 -- Define custom workspace names and numbered extras
-myWorkSpaces = ["web", "term", "social", "music", "video", "chat"] ++ (map show [7..9])
+myWorkSpaces = ["web", "term", "social", "music", "video"] ++ (map show [6..9])
 
 -- Define my custom logHook
 myLogHook bar = dynamicLogWithPP $ defaultPP
@@ -42,7 +43,7 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 										"Tall" -> " | "
 										"Mirror Tall" -> " - "
 										"Grid" -> " + "
-										"IM Spacing 8 Grid" -> " * "
+										--"IM Spacing 8 Grid" -> " * "
 										-- ASCII box character, in case this ever breaks
 										"Full" -> " ■ "
 										_ -> x
@@ -61,7 +62,7 @@ main = do
 	  -- so it needs to be "renamed" so JRE code works properly.
 	  startupHook = setWMName "LG3D",
 	  -- handles full screen things being properly full screen
-	  manageHook = manageDocks <+> composeOne [ className =? "Pidgin" -?> doShift "chat", 
+	  manageHook = manageDocks <+> composeOne [-- className =? "Pidgin" -?> doShift "chat", 
 												title =? "MOC" -?> doShift "music",
 	  											isFullscreen -?> doFullFloat
 	  ] <+> manageHook defaultConfig,
