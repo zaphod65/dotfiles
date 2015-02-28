@@ -12,6 +12,9 @@ set title
 set autoindent
 set smartindent
 
+set splitbelow
+set splitright
+
 set ignorecase
 set smartcase
 set hlsearch
