@@ -26,7 +26,7 @@ compinit -C
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
     'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
+#export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
 
 function rand {
 	echo $[RANDOM % $1+1]

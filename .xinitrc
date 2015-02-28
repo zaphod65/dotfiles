@@ -1,3 +1,4 @@
+export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
 setxkbmap -layout gb,gb
 stalonetray --icon-size=16 --kludges=force_icons_size &
 SpiderOak &
