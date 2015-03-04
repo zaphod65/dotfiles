@@ -31,3 +31,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 function rand {
 	echo $[RANDOM % $1+1]
 }
+
+function empty {
+	echo -n '' > $1
+}
