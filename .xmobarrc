@@ -10,11 +10,11 @@ Config { font = "-*-Fixed-Misc-*-*-*-*-13-*-*-*-*-*-*-*-",
 					  -- Script I generated myself - has latency because UPower doesn't update often enough.  Might fix.
 					  --Run Com "python3" ["/home/zaphod/.xmobin/batt.py"] "battery" 10,
 					  Run Com "/home/zaphod/.xmobin/music" [] "music" 10,
-					  --Run Com "/home/zaphod/.xmobin/volume" [] "volume" 1,
+					  Run Com "/home/zaphod/.xmobin/volume" [] "volume" 1,
 					  Run Com "/home/zaphod/.xmobin/netStatus" [] "net" 10,
 					  Run StdinReader ],
 		sepChar = "%",
 		alignSep = "}{",
-		--template = "%StdinReader% }{ %music% %volume% | %net% | %cpu% | %memory% | %battery% | %disku% --- <fc=#ee9a00>%date%</fc> "
-		template = "%StdinReader% }{ %music% %net% | %cpu% | %memory% | %disku% --- <fc=#ee9a00>%date%</fc> "
+		template = "%StdinReader% }{ %music% %volume% | %net% | %cpu% | %memory% | %disku% --- <fc=#ee9a00>%date%</fc> "
+		--template = "%StdinReader% }{ %music% %net% | %cpu% | %memory% | %disku% --- <fc=#ee9a00>%date%</fc> "
 	  }
