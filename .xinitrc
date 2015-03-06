@@ -1,5 +1,5 @@
 export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
-synergys --config /etc/synergy.conf
+#synergys --config /etc/synergy.conf
 setxkbmap -layout gb,gb
 stalonetray --icon-size=16 --kludges=force_icons_size &
 SpiderOak &
