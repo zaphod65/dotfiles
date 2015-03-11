@@ -11,7 +11,7 @@ MOCSTATE=$(mocp --info | head -n 1 | tail -c +8)
 artist=$(mocp --info | tail -n +4 | head -n 1 | tail -c +9)
 title=$(mocp --info | tail -n +5 | head -n 1 | tail -c +12)
 # Specific to the 1440x900 res of my TV
-artist=${artist:0:25}
+artist=${artist:0:26}
 title=${title:0:39}
 
 if [ $MOCSTATE == "PLAY" ]; then
