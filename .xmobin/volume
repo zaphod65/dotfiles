@@ -1,20 +1,20 @@
 #! /bin/bash
 
 # Returns the current master volume; requires alsa-utils
-#VALUE=`amixer get Master | sed s/%.*$// | sed 's/^.*\[//' | tail -n 1`
+VALUE=`amixer get Master | sed s/%.*$// | sed 's/^.*\[//' | tail -n 1`
 
 # gets the last word of the last line of output from amixer which
 # should be the status of sound, [off] == muted.
 MUTE=`amixer get Master | tail -n 1 | awk '{ print $NF }'`
 
 if [ "$MUTE" == "[off]" ]; then
-	#COLOUR="red"
-	echo "<fc=red>NO :-(</fc>"
+	COLOUR="red"
+	#echo "<fc=red>NO :-(</fc>"
 else
-	#COLOUR="green"
-	echo "<fc=green>SOUND!</fc>"
+	COLOUR="green"
+	#echo "<fc=green>SOUND!</fc>"
 fi
 
 
 # Format and print
-#echo "Vol: <fc=$COLOUR>$VALUE</fc>%"
+echo "Vol: <fc=$COLOUR>$VALUE</fc>%"

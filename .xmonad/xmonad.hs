@@ -96,9 +96,8 @@ main = do
 		((mod4Mask .|. shiftMask , xK_f), sendMessage $ Toggle FULL),
 	  -- Keys to control volume
 	    ((noModMask, xF86XK_AudioMute), spawn "/home/zaphod/.xmobin/doMute" ),
-		-- Taking these out for now because of issues with program volume affecting master volume
-	    --((noModMask, xF86XK_AudioLowerVolume), spawn "/home/zaphod/.xmobin/volDown"),
-		--((noModMask, xF86XK_AudioRaiseVolume), spawn "/home/zaphod/.xmobin/volUp"),
+	    ((noModMask, xF86XK_AudioLowerVolume), spawn "/home/zaphod/.xmobin/volDown"),
+		((noModMask, xF86XK_AudioRaiseVolume), spawn "/home/zaphod/.xmobin/volUp"),
 	  -- Media keys
 	    ((noModMask, xF86XK_AudioPlay), spawn "/home/zaphod/.xmobin/pause"),
 		((noModMask, xF86XK_AudioStop), spawn "/home/zaphod/.xmobin/stop"),
