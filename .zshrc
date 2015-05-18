@@ -29,7 +29,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
 if [[ ! $PATH == *"xmobin"* ]]
 then
 	export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
-	echo $PATH
 fi
 
 function rand {
