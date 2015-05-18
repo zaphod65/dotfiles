@@ -26,9 +26,10 @@ compinit -C
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
     'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-if [ !`echo $PATH | grep xmobin` ]
-	then
-		export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
+if [[ ! $PATH == *"xmobin"* ]]
+then
+	export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
+	echo $PATH
 fi
 
 function rand {
