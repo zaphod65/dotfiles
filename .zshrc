@@ -31,6 +31,8 @@ then
 	export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
 fi
 
+export EDITOR=vim
+
 function rand {
 	echo $[RANDOM % $1+1]
 }
