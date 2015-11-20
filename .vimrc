@@ -41,3 +41,7 @@ set noswapfile
 set nobackup
 
 set mouse-=a
+
+filetype on
+
+au BufRead,BufNewFile *.go set filetype=go
