@@ -4,6 +4,7 @@ syntax on
 set backspace=2
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 set showcmd
 set nocompatible
@@ -45,3 +46,4 @@ set mouse-=a
 filetype on
 
 au BufRead,BufNewFile *.go set filetype=go
+noremap <leader>o :tabe <bar> :E<CR>
