@@ -1,5 +1,5 @@
 autoload -Uz promptinit && promptinit
-prompt zaphod
+prompt walters
 
 alias ls='ls -F --color=auto'
 alias ll='ls -lha'
@@ -10,6 +10,7 @@ alias view='vim -R "+syntax on" "+set number" "+colo delek"'
 alias iftop='sudo iftop'
 alias moci='mocp --info'
 alias top='htop'
+alias fucking='sudo'
 
 HISTSIZE=1000
 SAVEHIST=1000
