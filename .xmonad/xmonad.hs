@@ -2,6 +2,7 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.Grid
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.IM
@@ -57,7 +58,7 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 
 main = do
   xmproc <- spawnPipe "xmobar"
-  xmonad $ defaultConfig {
+  xmonad $ ewmh defaultConfig {
 	  -- This is a weirdly hacky workaround for Java GUI applications; JRE doesn't recognise XMonad properly
 	  -- so it needs to be "renamed" so JRE code works properly.
 	  startupHook = setWMName "LG3D",
