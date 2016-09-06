@@ -85,9 +85,7 @@ main = do
 	    ((noModMask, xK_Print), spawn "scrot ~/dropbox/Public/screenshots/%Y-%m-%d-%T-shot.png"),
 	  -- Application shortcuts
 	    ((mod4Mask, xK_o), spawn "libreoffice"),
-        -- Bug with drop-downs in chrome; switched to chromium for now
-	    ((mod4Mask, xK_c), spawn "chromium-browser"),
-	    --((mod4Mask, xK_c), spawn "google-chrome"),
+	    ((mod4Mask, xK_c), spawn "google-chrome"),
 		((mod4Mask .|. shiftMask , xK_m), spawn "xterm -class XTerm-color -title MOC -name MOC -e mocp"),
 		--((mod4Mask .|. shiftMask , xK_s), spawn "steam"),
         -- work machine, so switching out Steam for Slack
