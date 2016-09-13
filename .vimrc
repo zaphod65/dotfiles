@@ -47,3 +47,4 @@ filetype on
 
 au BufRead,BufNewFile *.go set filetype=go
 noremap <leader>o :tabe <bar> :Explore<CR>
+noremap <leader><space> :noh<CR>
