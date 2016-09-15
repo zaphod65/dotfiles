@@ -24,7 +24,7 @@ set incsearch
 if &readonly
 	colorscheme delek
 else
-	colorscheme dante
+	colorscheme slate
 endif
 
 noremap <Left> <nop>
@@ -48,3 +48,12 @@ filetype on
 au BufRead,BufNewFile *.go set filetype=go
 noremap <leader>o :tabe <bar> :Explore<CR>
 noremap <leader><space> :noh<CR>
+
+noremap <leader>j :%!python -m json.tool<CR>
+
+set laststatus=2
+
+set go-=r
+set go-=m
+set go-=T
+set go-=L
