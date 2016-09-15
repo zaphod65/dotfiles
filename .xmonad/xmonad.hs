@@ -98,11 +98,11 @@ main = do
 	    ((mod4Mask .|. shiftMask , xK_a), windows SS.swapMaster),
 		((mod4Mask .|. shiftMask , xK_f), sendMessage $ Toggle FULL),
 	  -- Keys to control volume
-	    ((noModMask, xF86XK_AudioMute), spawn "/home/zaphod/.xmobin/doMute" ),
-	    ((noModMask, xF86XK_AudioLowerVolume), spawn "/home/zaphod/.xmobin/volDown"),
-		((noModMask, xF86XK_AudioRaiseVolume), spawn "/home/zaphod/.xmobin/volUp"),
+	    ((shiftMask .|. mod1Mask, xK_Return), spawn "/home/zaphod/.xmobin/doMute" ),
+	    ((shiftMask .|. mod1Mask, xK_Down), spawn "/home/zaphod/.xmobin/volDown"),
+		((shiftMask .|. mod1Mask, xK_Up), spawn "/home/zaphod/.xmobin/volUp"),
 	  -- Media keys
-	    ((noModMask, xF86XK_AudioPlay), spawn "/home/zaphod/.xmobin/pause"),
+	    ((shiftMask .|. mod1Mask, xK_space), spawn "/home/zaphod/.xmobin/pause"),
 		((noModMask, xF86XK_AudioStop), spawn "/home/zaphod/.xmobin/stop"),
-		((noModMask, xF86XK_AudioPrev), spawn "/home/zaphod/.xmobin/previous"),
-		((noModMask, xF86XK_AudioNext), spawn "/home/zaphod/.xmobin/next") ]
+		((shiftMask .|. mod1Mask, xK_Left), spawn "/home/zaphod/.xmobin/previous"),
+		((shiftMask .|. mod1Mask, xK_Right), spawn "/home/zaphod/.xmobin/next") ]
