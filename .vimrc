@@ -37,6 +37,8 @@ inoremap <Right> <nop>
 inoremap <Down> <nop>
 inoremap <Up> <nop>
 
+nmap <CR><CR> o<Esc>
+
 set nowritebackup
 set noswapfile
 set nobackup
