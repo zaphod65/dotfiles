@@ -1,1 +1,10 @@
-while true; do clear; ;echo Watching...;date;echo;git diff application/controllers/scripts/match_feeds_config.php; sleep 2; done
+#!/bin/bash
+
+while true; do
+    clear;
+    echo Watching... \`$2\`;
+    date;
+    echo;
+    $2
+    sleep $1;
+done
