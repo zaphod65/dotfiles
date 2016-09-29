@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while true; do
+    echo 'Switching...'
+    feh --randomize --bg-fill ~/Pictures/wallpapers/*
+    sleep 10m
+done;
