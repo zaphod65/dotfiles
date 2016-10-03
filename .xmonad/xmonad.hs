@@ -32,7 +32,7 @@ mylayouts = avoidStruts ( onWorkspace "video" Full $ mkToggle ( single FULL ) ( 
 myNormalBorderColor = "#444444"
 
 -- Define custom workspace names and numbered extras
-myWorkSpaces = ["code", "term", "data", "slack", "web", "social", "music"] ++ (map show [8..9])
+myWorkSpaces = ["code", "term", "data", "slack", "web"] ++ (map show [6..8]) ++ ["social"]
 
 -- Define my custom logHook
 myLogHook bar = dynamicLogWithPP $ defaultPP
