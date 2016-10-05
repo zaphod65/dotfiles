@@ -35,7 +35,7 @@ xmobarEscape = concatMap doubleLts
   where doubleLts '<' = "<<"
         doubleLts x   = [x]
 
-clickable l = [ "<action=xdotool key super+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
+clickable l = [ "<action=`xdotool key super+" ++ show (n) ++ "`>" ++ ws ++ "</action>" |
                  (i,ws) <- zip [1..(length l)] l,
                  let n = i ]
 
