@@ -31,8 +31,17 @@ mylayouts = avoidStruts ( onWorkspace "video" Full $ mkToggle ( single FULL ) ( 
 
 myNormalBorderColor = "#444444"
 
+xmobarEscape = concatMap doubleLts
+  where doubleLts '<' = "<<"
+        doubleLts x   = [x]
+
+clickable l = [ "<action=xdotool key super+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
+                 (i,ws) <- zip [1..(length l)] l,
+                 let n = i ]
+
 -- Define custom workspace names and numbered extras
-myWorkSpaces = ["code", "term", "data", "slack", "web"] ++ (map show [6..8]) ++ ["social"]
+myWorkSpaces = clickable . map xmobarEscape $ xs
+        where xs = ["code", "term", "data", "slack", "web"] ++ (map show [6..8]) ++ ["social"]
 
 -- Define my custom logHook
 myLogHook bar = dynamicLogWithPP $ defaultPP
