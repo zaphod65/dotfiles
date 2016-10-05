@@ -53,6 +53,8 @@ noremap <leader><space> :noh<CR>
 
 noremap <leader>j :%!python -m json.tool<CR>
 
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
 set laststatus=2
 
 set go-=r
