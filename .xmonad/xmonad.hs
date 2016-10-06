@@ -18,7 +18,7 @@ import Data.Ratio ((%))
 import XMonad.Hooks.SetWMName
 
 -- Three layouts used: tall, mirror tall and grid.  Plus sets up toggle for fullscreen of active window
-myTiled = Tall nmaster delta ratio 
+myTiled = Tall nmaster delta ratio
   where
   	nmaster = 1
 	ratio = 1/2
@@ -48,7 +48,7 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 	{ ppCurrent = xmobarColor "#b2b81a" "" . pad,
 	  ppVisible = xmobarColor "#9e0505" "" . pad,
 	  ppHidden  = xmobarColor "#909090" "" . pad,
-	  ppLayout  = xmobarColor "#909090" "" .  
+	  ppLayout  = xmobarColor "#909090" "" .
 	  							(\x -> case x of
 										"Tall" -> " | "
 										"Mirror Tall" -> " - "
@@ -72,7 +72,7 @@ main = do
 	  -- so it needs to be "renamed" so JRE code works properly.
 	  startupHook = setWMName "LG3D",
 	  -- handles full screen things being properly full screen
-	  manageHook = manageDocks <+> composeOne [-- className =? "Pidgin" -?> doShift "chat", 
+	  manageHook = manageDocks <+> composeOne [-- className =? "Pidgin" -?> doShift "chat",
 												title =? "MOC" -?> doShift "music",
 	  											isFullscreen -?> doFullFloat
 	  ] <+> manageHook defaultConfig,
@@ -90,7 +90,7 @@ main = do
 	  modMask = mod4Mask
   	  } `additionalKeys`
 	  -- Lock screen with screensaver
-	  [ ((mod4Mask .|. shiftMask , xK_l), spawn "xscreensaver-command -lock"), 
+	  [ ((mod4Mask .|. shiftMask , xK_l), spawn "xscreensaver-command -lock"),
 	    ((noModMask, xK_Print), spawn "scrot ~/dropbox/Public/screenshots/%Y-%m-%d-%T-shot.png"),
 	  -- Application shortcuts
 	    ((mod4Mask, xK_o), spawn "libreoffice"),
