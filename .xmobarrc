@@ -16,5 +16,5 @@ Config { font = "-*-Fixed-Misc-*-*-*-*-13-*-*-*-*-*-*-*-",
 					  Run UnsafeStdinReader ],
 		sepChar = "%",
 		alignSep = "}{",
-		template = "%UnsafeStdinReader% }{ %music% %volume% | <action=`rm /home/zaphod/.pomodoro_session` button=3><action=`touch /home/zaphod/.pomodoro_session` button=1>%pomodoro%</action></action> | %net% | %battery% | %cpu% | %memory% | %disku% --- <fc=#ee9a00><action=`gsimplecal` button=1>%date%</action></fc> "
+		template = "%UnsafeStdinReader% }{ %music% <action=`doMute`>%volume%</action> | <action=`rm /home/zaphod/.pomodoro_session` button=3><action=`touch /home/zaphod/.pomodoro_session` button=1>%pomodoro%</action></action> | %net% | %battery% | %cpu% | %memory% | %disku% --- <fc=#ee9a00><action=`gsimplecal` button=1>%date%</action></fc> "
 	  }
