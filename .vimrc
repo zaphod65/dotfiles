@@ -56,6 +56,7 @@ noremap <leader>j :%!python -m json.tool<CR>
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
 set laststatus=2
+let g:airline_powerline_fonts = 1
 
 set go-=r
 set go-=m
