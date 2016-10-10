@@ -24,7 +24,7 @@ set incsearch
 if &readonly
 	colorscheme delek
 else
-	colorscheme slate
+	colorscheme dante
 endif
 
 noremap <Left> <nop>
