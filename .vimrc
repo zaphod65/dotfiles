@@ -24,7 +24,7 @@ set incsearch
 if &readonly
 	colorscheme delek
 else
-	colorscheme dante
+	colorscheme slate
 endif
 
 noremap <Left> <nop>
@@ -62,3 +62,6 @@ set go-=r
 set go-=m
 set go-=T
 set go-=L
+
+let g:gitgutter_realtime = 1
+set updatetime=100
