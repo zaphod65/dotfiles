@@ -11,6 +11,7 @@ alias iftop='sudo iftop'
 alias moci='mocp --info'
 alias top='htop'
 alias fucking='sudo'
+alias vim='vim8'
 
 HISTSIZE=1000
 SAVEHIST=1000
@@ -32,7 +33,7 @@ then
 	export PATH=$PATH:/home/zaphod/.bin:/home/zaphod/.xmobin
 fi
 
-export EDITOR=vim
+export EDITOR=vim8
 
 function rand {
 	echo $[RANDOM % $1+1]
