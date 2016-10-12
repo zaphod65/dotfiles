@@ -96,12 +96,13 @@ main = do
 	    ((mod4Mask, xK_o), spawn "libreoffice"),
 	    ((mod4Mask, xK_c), spawn "google-chrome"),
 		((mod4Mask .|. shiftMask , xK_m), spawn "gnome-terminal --hide-menubar -e mocp"),
+		((mod4Mask, xK_v), spawn "gnome-terminal --hide-menubar -e 'vim8 /home/zaphod/mvfCode'"),
 		--((mod4Mask .|. shiftMask , xK_s), spawn "steam"),
         -- work machine, so switching out Steam for Slack
 		((mod4Mask .|. shiftMask , xK_s), spawn "slack"),
 		((mod4Mask, xK_s), spawn "skype"),
 	  --((mod4Mask , xK_e), spawn "krusader"),
-		((mod4Mask, xK_v), spawn "vlc"),
+		((mod4Mask .|. shiftMask , xK_v), spawn "vlc"),
 		((mod4Mask, xK_p), spawn "pidgin"),
 	  -- Additional binding for switching master window
 	    ((mod4Mask .|. shiftMask , xK_a), windows SS.swapMaster),
