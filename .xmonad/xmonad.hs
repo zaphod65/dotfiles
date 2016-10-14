@@ -106,7 +106,7 @@ main = do
 		((mod4Mask, xK_p), spawn "pidgin"),
 	  -- Additional binding for switching master window
 	    ((mod4Mask .|. shiftMask , xK_a), windows SS.swapMaster),
-		((mod4Mask .|. shiftMask , xK_f), sendMessage $ Toggle FULL),
+		((mod4Mask, xK_f), sendMessage $ Toggle FULL),
 	  -- Keys to control volume
 	    ((shiftMask .|. mod1Mask, xK_Return), spawn "/home/zaphod/.xmobin/doMute" ),
 	    ((shiftMask .|. mod1Mask, xK_Down), spawn "/home/zaphod/.xmobin/volDown"),
