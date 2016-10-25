@@ -12,7 +12,9 @@ else
     xrandr --output eDP1 --primary --mode 1920x1080
 fi
 
-#feh --bg-fill ~/.bg.jpg
-randomizeWallpaper > /dev/null 2> /dev/null &
+randomizeWallpaper &
+
+python3 /home/zaphod/git/mocp-scrobbler/mocp.py -d &
+
 xinput -disable "ELAN Touchscreen"
 exec xmonad
