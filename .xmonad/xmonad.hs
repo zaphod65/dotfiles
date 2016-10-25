@@ -41,7 +41,7 @@ clickable l = [ "<action=`xdotool key super+" ++ show (n) ++ "`>" ++ ws ++ "</ac
 
 -- Define custom workspace names and numbered extras
 myWorkSpaces = clickable . map xmobarEscape $ xs
-        where xs = ["code", "term", "data", "slack", "web"] ++ (map show [6..8]) ++ ["social"]
+        where xs = ["code", "term", "data", "slack", "web"] ++ (map show [6..7]) ++ ["music", "social"]
 
 -- Define my custom logHook
 myLogHook bar = dynamicLogWithPP $ defaultPP
@@ -96,7 +96,7 @@ main = do
 	    ((mod4Mask, xK_o), spawn "libreoffice"),
 	    ((mod4Mask, xK_c), spawn "google-chrome"),
 		((mod4Mask .|. shiftMask , xK_m), spawn "gnome-terminal --hide-menubar -e mocp"),
-		((mod4Mask, xK_v), spawn "gnome-terminal --hide-menubar -e 'vim8 /home/zaphod/mvfCode'"),
+		((mod4Mask, xK_v), spawn "gnome-terminal --hide-menubar -e 'vifm /home/zaphod/mvfCode'"),
 		--((mod4Mask .|. shiftMask , xK_s), spawn "steam"),
         -- work machine, so switching out Steam for Slack
 		((mod4Mask .|. shiftMask , xK_s), spawn "slack"),
