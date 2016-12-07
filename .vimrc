@@ -47,3 +47,9 @@ filetype on
 
 au BufRead,BufNewFile *.go set filetype=go
 noremap <leader>o :tabe <bar> :Explore<CR>
+
+inoremap <leader><space> :noh<CR>
+
+noremap <leader>j :%!python -m json.tool<CR>
+
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:
