@@ -62,4 +62,12 @@ set go=i
 
 noremap <leader><Right> :bn<CR>
 noremap <leader><Left> :bp<CR>
+
+nmap <Left> <<
+nmap <Right> >>
+vmap <Left> <gv
+vmap <Right> >gv
+
 set wildchar=<Tab> wildmenu wildmode=full
+set wildcharm=<C-Z>
+nnoremap <F10> :b <C-Z>
