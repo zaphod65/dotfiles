@@ -55,8 +55,8 @@ noremap <leader>j :%!python -m json.tool<CR>
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:
 
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tableine#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tableine#buffer_nr_show=1
 
 set go=i
 
