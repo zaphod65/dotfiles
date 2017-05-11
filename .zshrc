@@ -11,6 +11,7 @@ alias iftop='sudo iftop'
 alias moci='mocp --info'
 alias top='htop'
 alias fucking='sudo'
+alias vim='nvim'
 
 HISTSIZE=1000
 SAVEHIST=1000

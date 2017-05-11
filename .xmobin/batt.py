@@ -3,7 +3,7 @@
 from subprocess import Popen, PIPE
 
 formatString = "{word}: <fc={colour}>{percent}</fc>%"
-commandString = "upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+commandString = "upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 out = Popen(commandString, shell=True, stdout=PIPE).stdout.read().decode('UTF-8').split('\n')
 
 for line in out:
