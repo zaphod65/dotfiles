@@ -57,10 +57,11 @@ myLogHook bar = dynamicLogWithPP $ defaultPP
 
 main = do
   xmproc <- spawnPipe "xmobar"
-  xmonad $ defaultConfig {
+  xmonad $ docks defaultConfig {
 	  -- This is a weirdly hacky workaround for Java GUI applications; JRE doesn't recognise XMonad properly
 	  -- so it needs to be "renamed" so JRE code works properly.
 	  startupHook = setWMName "LG3D",
+      handleEventHook = mconcat [docksEventHook, handleEventHook defaultConfig],
 	  -- handles full screen things being properly full screen
 	  manageHook = manageDocks <+> composeOne [-- className =? "Pidgin" -?> doShift "chat", 
 												title =? "MOC" -?> doShift "music",
@@ -84,7 +85,7 @@ main = do
 	    ((noModMask, xK_Print), spawn "scrot ~/dropbox/Public/screenshots/%Y-%m-%d-%T-shot.png"),
 	  -- Application shortcuts
 	    ((mod4Mask, xK_o), spawn "libreoffice"),
-	    ((mod4Mask, xK_c), spawn "google-chrome"),
+	    ((mod4Mask, xK_c), spawn "google-chrome-stable"),
 		((mod4Mask .|. shiftMask , xK_m), spawn "xterm -class XTerm-color -title MOC -name MOC -e mocp"),
 		((mod4Mask .|. shiftMask , xK_s), spawn "steam"),
 		((mod4Mask, xK_s), spawn "skype"),
