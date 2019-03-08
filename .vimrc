@@ -80,5 +80,3 @@ let g:airline_powerline_fonts = 1
 " enable ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" file browser open in new buffer
-let g:netrw_liststyle=3
