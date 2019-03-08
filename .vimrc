@@ -24,7 +24,7 @@ set incsearch
 if &readonly
 	colorscheme delek
 else
-	colorscheme dante
+	colorscheme slate
 endif
 
 noremap <Left> <nop>
@@ -52,7 +52,7 @@ inoremap <leader><space> :noh<CR>
 
 noremap <leader>j :%!python -m json.tool<CR>
 
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:_
 
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
@@ -71,3 +71,14 @@ vmap <Right> >gv
 set wildchar=<Tab> wildmenu wildmode=full
 set wildcharm=<C-Z>
 nnoremap <F10> :b <C-Z>
+
+" no audio or visual bell
+set noeb vb t_vb=
+" air-line fonts
+let g:airline_powerline_fonts = 1
+
+" enable ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" file browser open in new buffer
+let g:netrw_liststyle=3
