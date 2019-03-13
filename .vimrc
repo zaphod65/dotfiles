@@ -77,6 +77,7 @@ set noeb vb t_vb=
 " air-line fonts
 let g:airline_powerline_fonts = 1
 
-" enable ctrlp
+" enable ctrlp and set custom ignore
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore='node_modules\|vendor'
 
