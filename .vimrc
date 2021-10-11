@@ -48,11 +48,11 @@ filetype on
 au BufRead,BufNewFile *.go set filetype=go
 noremap <leader>o :tabe <bar> :Explore<CR>
 
-inoremap <leader><space> :noh<CR>
+noremap <leader><space> :noh<CR>
 
 noremap <leader>j :%!python -m json.tool<CR>
 
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:_
+set listchars=eol:Â¬,tab:>Â·,trail:~,extends:>,precedes:<,space:_
 
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
